@@ -1,5 +1,5 @@
 class Motor():
-    def __init__(self, numeroCilindros, registro, tipo):
+    def __init__(self, numeroCilindros, tipo, registro):
         self.numeroCilindros = numeroCilindros
         self.registro = registro
         self.tipo = tipo
@@ -11,7 +11,7 @@ class Motor():
         self.tipo = tipo
 
 class Asiento():
-    def __init__(self, precio, registro, color):
+    def __init__(self, color, precio, registro):
         self.precio = precio
         self.registro = registro
         self.color = color
