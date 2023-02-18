@@ -1,3 +1,6 @@
+from abc import abstractproperty
+
+
 class Motor():
     def __init__(self, numeroCilindros, tipo, registro):
         self.numeroCilindros = numeroCilindros
@@ -32,9 +35,12 @@ class Auto():
         self.cantidadCreados += 1
         self.asientos = asientos
     
-    @classmethod
-    def cantidadAsientos(cls):
-        return len(cls.asientos)
+    def cantidadAsientos(self):
+        c = 0
+        for n in self.asientos:
+            if n != None:
+                c += 1
+        return c
 
     def verificarIntegridad(self):
         P = "Auto original"
@@ -43,3 +49,7 @@ class Auto():
                 P = "Las  piezas no son originales"
 
         return P
+
+"""a = Auto("model 3", 2222, list(), "tesla", Motor(4, "electrico", 142), 341)
+a.asientos = [Asiento("blanco", 5000, 435),None, None, Asiento("blanco", 5000, 435), None]
+print(a.cantidadAsientos())"""
