@@ -34,7 +34,7 @@ def testMetodoAsignarTipo():
     m2.asignarTipo("electrico")
     ok = False
     
-    if(m1.tipo == "normal" and m2.tipo == "electrico"):
+    if(m1.tipo == "hibrido" and m2.tipo == "electrico"):
         ok = True
     assert(ok)
 	
