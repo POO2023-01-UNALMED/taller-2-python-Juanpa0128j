@@ -45,11 +45,8 @@ class Auto():
     def verificarIntegridad(self):
         P = "Auto original"
         for n in self.asientos:
-            if self.registro !=  n.registro or self.registro != self.motor.registro or self.motor.registro != n.registro:
-                P = "Las  piezas no son originales"
+            if n != None:
+                if self.registro !=  n.registro or self.registro != self.motor.registro or self.motor.registro != n.registro:
+                    P = "Las  piezas no son originales"
 
         return P
-
-"""a = Auto("model 3", 2222, list(), "tesla", Motor(4, "electrico", 142), 341)
-a.asientos = [Asiento("blanco", 5000, 435),None, None, Asiento("blanco", 5000, 435), None]
-print(a.cantidadAsientos())"""
