@@ -1,5 +1,3 @@
-from abc import abstractproperty
-
 
 class Motor():
     def __init__(self, numeroCilindros, tipo, registro):
@@ -47,6 +45,6 @@ class Auto():
         for n in self.asientos:
             if n != None:
                 if self.registro !=  n.registro or self.registro != self.motor.registro or self.motor.registro != n.registro:
-                    P = "Las  piezas no son originales"
+                    P = "Las piezas no son originales"
 
         return P
